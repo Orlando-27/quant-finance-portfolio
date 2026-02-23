@@ -1,0 +1,21 @@
+# Default Configuration for Black-Scholes Engine
+pricing:
+  spot: 100.0
+  strike: 100.0
+  expiration_years: 1.0
+  risk_free_rate: 0.05
+  volatility: 0.20
+  dividend_yield: 0.0
+
+binomial_tree:
+  n_steps: 500
+  use_richardson: true
+
+implied_volatility:
+  solver_method: newton_raphson
+  tolerance: 1.0e-8
+  max_iterations: 100
+
+visualization:
+  dpi: 300
+  figure_format: png

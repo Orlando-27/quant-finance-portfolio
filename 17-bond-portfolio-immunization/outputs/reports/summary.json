@@ -1,0 +1,47 @@
+{
+  "immunization": {
+    "portfolio_pv": 687290.7278440614,
+    "liability_pv": 687290.7278440614,
+    "pv_match": "True",
+    "portfolio_duration": 5.669743422097917,
+    "liability_duration": 5.669743422097917,
+    "duration_match": "True",
+    "portfolio_convexity": 97.52716603249337,
+    "liability_convexity": 40.39104525914186,
+    "convexity_surplus": 57.13612077335151,
+    "immunized": "True",
+    "optimizer_success": true,
+    "optimizer_message": "Optimization terminated successfully"
+  },
+  "cfm": {
+    "total_cost": 211745.22577641386,
+    "fully_matched": true
+  },
+  "structures": {
+    "Bullet": {
+      "pv": 687290.7278440614,
+      "duration": 4.484639625706135,
+      "convexity": 23.43771560095286,
+      "dv01": 308.2251232469889
+    },
+    "Barbell": {
+      "pv": 687290.7278440614,
+      "duration": 8.086257426610889,
+      "convexity": 157.44413924594195,
+      "dv01": 555.7609752269846
+    },
+    "Ladder": {
+      "pv": 687290.7278440613,
+      "duration": 7.043717605992933,
+      "convexity": 94.69927436411548,
+      "dv01": 484.10818001509125
+    },
+    "Immunized": {
+      "pv": 687290.7278440614,
+      "duration": 5.669743422097917,
+      "convexity": 97.52716603249337,
+      "dv01": 389.67620832627574
+    }
+  },
+  "krd_sum": 5.7584661319075945
+}

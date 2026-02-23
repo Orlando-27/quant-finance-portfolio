@@ -1,0 +1,59 @@
+# Yield Curve Modeling Configuration
+# ====================================
+
+data:
+  # US Treasury tenors (years) – standard DGS maturities
+  us_tenors: [0.25, 0.5, 1.0, 2.0, 3.0, 5.0, 7.0, 10.0, 20.0, 30.0]
+
+  # Colombian TES tenors (years) – typical liquid maturities
+  tes_tenors: [0.25, 0.5, 1.0, 2.0, 3.0, 5.0, 7.0, 10.0, 15.0]
+
+  start_date: "2015-01-01"
+  end_date:   "2024-12-31"
+
+nelson_siegel:
+  # Initial parameter guesses: [beta0, beta1, beta2, lambda]
+  # beta0: long-term level (≈ long yield)
+  # beta1: slope (short - long)
+  # beta2: curvature (hump)
+  # lambda: decay factor (controls hump location)
+  initial_params: [0.06, -0.02, 0.01, 1.5]
+  bounds:
+    beta0:  [0.001, 0.25]
+    beta1:  [-0.20, 0.20]
+    beta2:  [-0.20, 0.20]
+    lambda: [0.01,  5.0]
+
+nelson_siegel_svensson:
+  # [beta0, beta1, beta2, beta3, lambda1, lambda2]
+  initial_params: [0.06, -0.02, 0.01, 0.005, 1.5, 5.0]
+
+pca:
+  n_components: 3        # level, slope, curvature
+  scale: true            # standardize before PCA
+
+var:
+  max_lags: 6            # maximum VAR lag order (AIC selection)
+  forecast_horizon: 12   # months ahead
+
+bootstrap:
+  n_iterations: 500      # bootstrap replications
+  confidence_level: 0.95 # confidence band width
+
+visualization:
+  style: "dark_theme"
+  watermark: "Jose Orlando Bobadilla Fuentes, CQF | MSc AI"
+  dpi: 150
+  figsize_wide: [16, 10]
+  figsize_tall: [14, 12]
+  palette:
+    - "#00D4FF"   # cyan
+    - "#FF6B35"   # orange
+    - "#7FFF7F"   # green
+    - "#FFD700"   # gold
+    - "#DA70D6"   # orchid
+    - "#00CED1"   # dark turquoise
+    - "#FF4500"   # red-orange
+    - "#32CD32"   # lime green
+    - "#FF8C00"   # dark orange
+    - "#9370DB"   # medium purple

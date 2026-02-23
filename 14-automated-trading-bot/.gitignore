@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Outputs (charts, logs generated at runtime)
+outputs/charts/*.png
+outputs/logs/*.log
+outputs/reports/
+data/
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# IB specific
+*.ib.json

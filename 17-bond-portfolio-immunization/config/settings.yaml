@@ -1,0 +1,33 @@
+# Bond Portfolio Immunization — Configuration
+# Author: Jose Orlando Bobadilla Fuentes | CQF
+
+portfolio:
+  face_value: 1000.0          # Default face/par value (USD)
+  settlement_days: 2           # T+2 settlement convention
+
+visualization:
+  style: "dark"
+  background_color: "#0a0a0a"
+  text_color: "#e0e0e0"
+  accent_color: "#00d4ff"
+  positive_color: "#00ff9f"
+  negative_color: "#ff4d6d"
+  grid_color: "#1e1e2e"
+  watermark: "Jose O. Bobadilla | CQF"
+  dpi: 150
+  fig_format: "png"
+
+key_rates:
+  tenors_years: [0.083, 0.25, 0.5, 1.0, 2.0, 5.0, 10.0, 30.0]
+  labels: ["1M", "3M", "6M", "1Y", "2Y", "5Y", "10Y", "30Y"]
+  shock_bps: 1                 # Basis points bump per key rate
+
+scenario:
+  parallel_shocks_bps: [-300, -200, -100, -50, 50, 100, 200, 300]
+  curve_scenarios:
+    - name: "Steepener"
+      description: "Short end -50bps, Long end +100bps"
+    - name: "Flattener"
+      description: "Short end +100bps, Long end -50bps"
+    - name: "Butterfly"
+      description: "Short/Long -50bps, Belly +75bps"

@@ -1,0 +1,28 @@
+analysis:
+  default_tickers: ["SPY", "QQQ", "IWM", "GLD", "TLT"]
+  start_date: "2020-01-01"
+  end_date: "2024-12-31"
+  intraday_interval: "1m"      # for VWAP/intraday (1d, 5m, 15m, 30m, 60m, 1m)
+  risk_free_rate: 0.045
+
+microstructure:
+  roll_window: 60              # days for rolling Roll spread
+  amihud_window: 252           # annual Amihud illiquidity
+  kyle_lambda_window: 20       # rolling window for Kyle's lambda
+  vpin_bucket_size: 50         # volume buckets for VPIN
+
+market_impact:
+  eta: 0.01                    # temporary impact coefficient
+  gamma: 1e-6                  # permanent impact coefficient (linear)
+  sigma: 0.015                 # daily volatility
+  T: 1.0                       # horizon (days)
+  N: 10                        # number of trading periods
+
+visualization:
+  style: "dark_theme"
+  watermark: "Jose Orlando Bobadilla Fuentes, CQF | MSc AI"
+  dpi: 150
+  figsize_wide: [16, 10]
+  figsize_tall: [14, 12]
+  palette: ["#00D4FF", "#FF6B35", "#7FFF7F", "#FFD700", "#DA70D6",
+            "#00CED1", "#FF4500", "#32CD32", "#FF8C00", "#9370DB"]
