@@ -1,7 +1,7 @@
 # Project 18 — Real-Time Portfolio Analytics Dashboard
 
 **Author:** Jose Orlando Bobadilla Fuentes | CQF | MSc AI
-**Institution:** Colfondos S.A. — Vicepresidencia de Inversiones
+**Institution:** Colombian Pension Fund — Investment Division
 
 ## Overview
 Production-grade Streamlit dashboard for real-time portfolio risk analytics,

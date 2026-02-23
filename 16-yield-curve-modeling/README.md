@@ -6,7 +6,7 @@
 
 **Author:** Jose Orlando Bobadilla Fuentes, CQF | MSc AI
 **Role:** Senior Quantitative Portfolio Manager & Lead Data Scientist
-**Organization:** Colfondos S.A. – Vicepresidencia de Inversiones
+**Organization:** Colombian Pension Fund – Vicepresidencia de Inversiones
 **Project:** 15 of 20 | Quantitative Finance Portfolio
 
 ---

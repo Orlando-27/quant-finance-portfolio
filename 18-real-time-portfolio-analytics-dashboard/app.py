@@ -54,7 +54,7 @@ with st.sidebar:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 st.title("Real-Time Portfolio Analytics Dashboard")
-st.caption("Senior Quantitative Portfolio Manager | Colfondos S.A. — Vicepresidencia de Inversiones")
+st.caption("Senior Quantitative Portfolio Manager | Colombian Pension Fund — Investment Division")
 st.markdown("---")
 
 @st.cache_data(ttl=300)
